@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London High School Kabowa | Discipline & Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root { --light-blue: #ADD8E6; --yellow: #FFD700; --red: #FF0000; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* High-End Visuals: Ensures images cover the area and look sharp */
+        .img-container { position: relative; overflow: hidden; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .img-container:hover img { transform: scale(1.05); }
+
+        /* Fallback for images if links are blocked */
+        .img-fallback { background: linear-gradient(135deg, #ADD8E6 0%, #FFD700 100%); min-height: 400px; display: flex; align-items: center; justify-content: center; color: #003366; font-weight: bold; border-radius: 1.5rem; }
+
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); transform: translateY(-2px); }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center">
+        <img src="https://i.ibb.co/1tmx9pxR/logo.png" class="w-32 animate-pulse mb-4" onerror="this.src='https://via.placeholder.com/150?text=LHS+Logo'">
+        <div class="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+            <div id="progress" class="h-full bg-blue-500 w-0 transition-all duration-1000"></div>
+        </div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 glass-nav py-4 px-6 flex justify-between items-center">
+        <img src="https://i.ibb.co/1tmx9pxR/logo.png" class="h-12" alt="LHS Logo" onerror="this.style.display='none'">
+        <div class="hidden md:flex space-x-8 font-bold text-blue-900">
+            <a href="#academics">Academics</a>
+            <a href="#fees">Fees</a>
+            <a href="#life">Student Life</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="bg-[#FF0000] text-white px-6 py-2 rounded-full font-bold btn-glow transition-all">STUDENT PORTAL</button>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://i.ibb.co/DHjpZTtp/hero.jpg" class="w-full h-full object-cover opacity-30" onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="relative z-10 text-center px-4" data-aos="zoom-in">
+            <h1 class="text-6xl md:text-8xl font-black text-blue-900 mb-4">London High School</h1>
+            <p class="text-2xl md:text-3xl text-blue-700 font-medium italic">"Discipline and Excellence"</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <button class="bg-[#FFD700] text-blue-900 px-8 py-4 rounded-xl font-black text-lg shadow-xl">ADMISSIONS 2026</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" class="img-container aspect-video">
+                <img src="https://i.ibb.co/Q7dpzSPv/learning.jpg" alt="Learning Environment" onerror="this.parentElement.innerHTML='<div class=img-fallback>Learning Environment Photo</div>'">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-black text-blue-900 mb-6">World-Class Learning</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">Located in the heart of Kampala, we offer an environment that nurtures critical thinking and academic rigor across all O-Level and A-Level subjects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="py-24 bg-[#ADD8E6] bg-opacity-30">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-black text-center text-blue-900 mb-12">Fee Structure</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#FFD700]" data-aos="flip-left">
+                    <h3 class="text-2xl font-bold mb-4">S.1 – S.3</h3>
+                    <p class="flex justify-between py-2 border-b"><span>Day Students:</span> <b>390,000 UGX</b></p>
+                    <p class="flex justify-between py-2"><span>Boarding:</span> <b>650,000 UGX</b></p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#FF0000]" data-aos="flip-right">
+                    <h3 class="text-2xl font-bold mb-4">S.4 – S.6</h3>
+                    <p class="flex justify-between py-2 border-b"><span>Day Students:</span> <b>450,000 UGX</b></p>
+                    <p class="flex justify-between py-2"><span>Boarding:</span> <b>750,000 UGX</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="life" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-black text-blue-900 mb-6">Clubs & Critical Thinking</h2>
+                <p class="text-lg text-gray-600">Our students engage in debate, sports, and leadership programs that build character and teamwork.</p>
+            </div>
+            <div data-aos="zoom-in" class="img-container aspect-video">
+                <img src="https://i.ibb.co/TxfM7CTK/clubs.jpg" alt="Clubs" onerror="this.parentElement.innerHTML='<div class=img-fallback>Clubs & Activities</div>'">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-900 text-white text-center">
+        <h2 class="text-xl opacity-80 mb-2 uppercase tracking-widest">Global Enrollment Growth</h2>
+        <div id="count" class="text-7xl font-black text-[#FFD700]">0</div>
+        <p class="mt-4">Join our growing community today.</p>
+    </section>
+
+    <footer id="contact" class="bg-white pt-20 pb-10 px-6 border-t">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <h4 class="font-black text-blue-900 text-xl mb-4">Visit Us</h4>
+                <p class="text-gray-600 italic">Sserwadda Zone, Kabowa Parish, along Wankulukuku Road, Lubaga Division, Kampala, Uganda.</p>
+            </div>
+            <div>
+                <h4 class="font-black text-blue-900 text-xl mb-4">Call Admissions</h4>
+                <p class="text-gray-600 font-bold">0700 603640 | 0703 162405</p>
+                <p class="text-gray-600 font-bold">0752 949160</p>
+            </div>
+            <div>
+                <h4 class="font-black text-blue-900 text-xl mb-4">Email</h4>
+                <p class="text-gray-600">londonhisch@yahoo.com</p>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-400 border-t pt-8">
+            &copy; 2026 London High School Kabowa. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // 1. Intro Animation
+        setTimeout(() => {
+            document.getElementById('progress').style.width = '100%';
+        }, 100);
+        setTimeout(() => {
+            document.getElementById('loader').style.transform = 'translateY(-100%)';
+            document.getElementById('loader').style.transition = '0.8s ease-in-out';
+            AOS.init({ duration: 1000, once: true });
+            startCounter();
+        }, 3000);
+
+        // 2. Enrollment Counter
+        function startCounter() {
+            let count = 0;
+            const target = 1500;
+            const timer = setInterval(() => {
+                count += 15;
+                document.getElementById('count').innerText = count + "+";
+                if(count >= target) clearInterval(timer);
+            }, 30);
+        }
+    </script>
+
+    <a href="https://wa.me/256700603640" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8">
+    </a>
+
+</body>
+</html>
